@@ -22,10 +22,12 @@ Then("Right Unit picker value should be {string}") do |value2|
   end
 end
 
-#untuk button disable & enable dalam satu step/
+#untuk button disable & enable dalam satu step (get value enable atau disable)
 Then(/^Show all button should be (enabled|disabled)$/) do |state|
   button_state = find_element(id: "btn_show_all").enabled?
-  
+
+  #print(button_state)
+
   if state == "enabled"
     if button_state !=  true
       fail("Button not enable")
