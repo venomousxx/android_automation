@@ -24,7 +24,7 @@ end
 
 #untuk button disable & enable dalam satu step/
 Then(/^Show all button should be (enabled|disabled)$/) do |state|
-  button_state = find_element(id: "btn_show_all").enable?
+  button_state = find_element(id: "btn_show_all").enabled?
   
   if state == "enabled"
     if button_state !=  true
